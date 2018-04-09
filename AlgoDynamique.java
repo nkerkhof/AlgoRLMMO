@@ -24,12 +24,12 @@ public class AlgoDynamique extends InterfaceAlgoRLMMO {
 					tab[j][i].next = tab[j][i-1];
 				}
 				
-				if(tab[j][i].estinfini) {
+				/*if(tab[j][i].estinfini) {
 					System.out.print("i");
 				} else {System.out.print(tab[j][i].valeur);}
-				System.out.print("  ");
+				System.out.print("  ");*/
 			}
-			System.out.println("");
+			//System.out.println("");
 		}
 		
 		CaseType resultat = getMin();

@@ -4,10 +4,10 @@ public abstract class InterfaceAlgoRLMMO {
 	public int nbCoupPiece[] = new int[typePiece.length];
 	
 	public abstract int[] execute(int prix);
-	public String affichage() {
+	public String affichage(int[] solution) {
 		String str = "";
 		for(int i=0; i<typePiece.length;i++) {
-			str += "valeur "+typePiece[i]+"   avec un nb " +nbCoupPiece[i]+"\n";
+			str += "valeur "+typePiece[i]+"   avec un nb " +solution[i]+"\n";
 		}
 		return str;
 	}

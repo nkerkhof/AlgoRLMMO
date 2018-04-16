@@ -11,4 +11,8 @@ public abstract class InterfaceAlgoRLMMO {
 		}
 		return str;
 	}
+	
+	public void setTypePiece(int [] tab) {
+		typePiece = tab;
+	}
 }

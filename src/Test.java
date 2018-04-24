@@ -6,22 +6,29 @@ public class Test {
 
 	public static void main(String[] args) {
 		int[] typePiece = { 1, 2, 5, 10, 20, 50, 100, 200 };
-		String text = "";
-		text += "nb\ttestDynamique\ttestGlouton\ttestEssaisSuccessif2\ttestEssaisSuccessif3\t\n";
-		for(int prix=1; prix<100;prix++) {
+		testDynamique(typePiece, 10);
+		/*String text = "";
+		text += "nb\ttestEssaisSuccessif1\ttestEssaisSuccessif2\ttestEssaisSuccessif3\t\n";
+		long debut = System.nanoTime();
+		int prix = 1;
+		long temps = 600000000000L;
+		while(prix <= 200 && (System.nanoTime()-debut)<((long) temps)) {
 			text +=prix+"\t";
-			text +=testDynamique(typePiece, prix);
+			//text +=testDynamique(typePiece, prix);
+			//text +="\t";
+			//text +=testGlouton(typePiece, prix);
+			//text +="\t";
+			//text +=testEssaisSuccessif(typePiece, prix, 0);
+			//text +="\t";
+			text +=testEssaisSuccessif(typePiece, prix, 1);
 			text +="\t";
-			text +=testGlouton(typePiece, prix);
-			text +="\t";
-			// testEssaisSuccessif(typePiece, prix, 0);
-			// testEssaisSuccessif(typePiece, prix, 1);
 			text +=testEssaisSuccessif(typePiece, prix, 2);
 			text +="\t";
 			text +=testEssaisSuccessif(typePiece, prix, 3);
 			text +="\t\n";
+			prix++;
 		}
-		ecrireCSV(text, "./test.csv");
+		ecrireCSV(text, "./testESS.csv");*/
 	}
 
 	private static float testDynamique(int[] typePiece, int prix) {

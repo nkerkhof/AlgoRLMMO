@@ -50,16 +50,15 @@ public class AlgoEssaiSucc extends InterfaceAlgoRLMMO {
 		}
 		// System.out.println("Num algo : "+algoSelect);
 		// System.out.println(affichage(solution));
-
 		return solution;
 
 	}
 
 	public void rlmmoSansElag(int i) {
 		for (int h = 0; h <= prix; h++) {
-			somcour += h * typePiece[i];
+			nbCoupPiece[i] = h;
 			if (somcour <= prix) {
-				nbCoupPiece[i] = h;
+				somcour += h * typePiece[i];
 				nbPiece += h;
 				if (somcour == prix) {
 					if (nbPiece < nbOpt) {
